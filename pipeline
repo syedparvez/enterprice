@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('SCM') {
+            steps {
+                git branch: 'dev', url: 'https://github.com/syedparvez/enterprice.git'
+            }
+        }
+        
+    }
+}
